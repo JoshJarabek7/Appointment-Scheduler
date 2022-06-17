@@ -12,15 +12,14 @@ import java.util.Objects;
 
 /**
  * The class for SceneSwitcher.
- * @author Joshua Jarabek
- * Created in order to make it easier to switch scenes.
- * The code block for switching scenes tends to be very long.
- * This class makes it short and easy to switch scenes.
+ *
+ * @author Joshua Jarabek Created in order to make it easier to switch scenes. The code block for switching scenes tends to be very long. This class makes it short and easy to switch scenes.
  */
 public class SceneSwitcher { //Class for making scene switching easier
     /**
      * Switch screen.
      * This method is used to switch screens.
+     *
      * @param event     the event that triggers the switch
      * @param sceneName the scene name to switch to
      * @throws IOException the io exception if the scene cannot be loaded

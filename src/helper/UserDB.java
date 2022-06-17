@@ -9,15 +9,20 @@ import java.sql.*;
 
 /**
  * The class for the user database
+ *
  * @author Joshua Jarabek
  */
 public class UserDB { //Class for the user database
+    /**
+     * The constant users.
+     */
     @FXML
     private static ObservableList<User> users = FXCollections.observableArrayList(); //Observable list for the users
 
     /**
      * Gets all users.
      * Method for getting all users
+     *
      * @return all users
      */
     public static ObservableList<User> getAllUsers() { //Method for getting all the users

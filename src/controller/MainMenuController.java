@@ -22,67 +22,158 @@ import java.util.TimeZone;
 
 /**
  * The class MainMenuController is the controller for the main menu.
+ *
  * @author Joshua Jarabek
  */
 public class MainMenuController implements Initializable { //This class is the controller for the main menu screen.
+    /**
+     * The Exit button.
+     */
     @FXML
     private Button exitButton; //The button to exit the application.
+    /**
+     * The View all appointments.
+     */
     @FXML
     private RadioButton viewAllAppointments; //The radio button to view all appointments.
+    /**
+     * The Appointments this month.
+     */
     @FXML
     private RadioButton appointmentsThisMonth; //The radio button to view appointments this month.
+    /**
+     * The Appointments table.
+     */
     @FXML
     private TableView<Appointment> appointmentsTable; //The table view for the appointments.
+    /**
+     * The Appointments this week.
+     */
     @FXML
     private RadioButton appointmentsThisWeek; //The radio button to view appointments this week.
+    /**
+     * The View customers.
+     */
     @FXML
     private Button viewCustomers; //The button to view all customers.
+    /**
+     * The New appointment.
+     */
     @FXML
     private Button newAppointment; //The button to add a new appointment.
+    /**
+     * The Modify appointment.
+     */
     @FXML
     private Button modifyAppointment; //The button to modify an appointment.
+    /**
+     * The Delete appointment.
+     */
     @FXML
     private Button deleteAppointment; //The button to delete an appointment.
+    /**
+     * The Open reports.
+     */
     @FXML
     private Button openReports; //The button to open the reports screen.
+    /**
+     * The Time zone label.
+     */
     @FXML
     private Label timeZoneLabel; //The label for the time zone.
+    /**
+     * The Main table id.
+     */
     @FXML
     private TableColumn<Appointment, Integer> mainTableID; //The table column for the appointment ID.
+    /**
+     * The Main table title.
+     */
     @FXML
     private TableColumn<Appointment, String> mainTableTitle; //The table column for the appointment title.
+    /**
+     * The Main table description.
+     */
     @FXML
     private TableColumn<Appointment, String> mainTableDescription; //The table column for the appointment description.
+    /**
+     * The Main table location.
+     */
     @FXML
     private TableColumn<Appointment, String> mainTableLocation; //The table column for the appointment location.
+    /**
+     * The Main table contact.
+     */
     @FXML
     private TableColumn<Appointment, String> mainTableContact; //The table column for the appointment contact.
+    /**
+     * The Main table type.
+     */
     @FXML
     private TableColumn<Appointment, String> mainTableType; //The table column for the appointment type.
+    /**
+     * The Main table start.
+     */
     @FXML
     private TableColumn<Appointment, LocalTime> mainTableStart; //The table column for the appointment start time.
+    /**
+     * The Main table end.
+     */
     @FXML
     private TableColumn<Appointment, LocalTime> mainTableEnd; //The table column for the appointment end time.
+    /**
+     * The Main table customer id.
+     */
     @FXML
     private TableColumn<Appointment, String> mainTableCustomerID; //The table column for the appointment customer ID.
+    /**
+     * The Main table user id.
+     */
     @FXML
     private TableColumn<Appointment, String> mainTableUserID; //The table column for the appointment user ID.
+    /**
+     * The Main table create date.
+     */
     @FXML
     private TableColumn<Appointment, LocalDateTime> mainTableCreateDate; //The table column for the appointment create date.
+    /**
+     * The Main table created by.
+     */
     @FXML
     private TableColumn<Appointment, String> mainTableCreatedBy; //The table column for the appointment created by.
+    /**
+     * The Main table last update.
+     */
     @FXML
     private TableColumn<Appointment, LocalDateTime> mainTableLastUpdate; //The table column for the appointment last update.
+    /**
+     * The Main table last updated by.
+     */
     @FXML
     private TableColumn<Appointment, String> mainTableLastUpdatedBy; //The table column for the appointment last updated by.
+    /**
+     * The Main table toggle.
+     */
     @FXML
     private ToggleGroup mainTableToggle; //The toggle group for the table view.
+    /**
+     * The All appointments.
+     */
     @FXML
     private ObservableList<Appointment> allAppointments = FXCollections.observableArrayList(); //The observable list for all the appointments.
+    /**
+     * The This months appointments.
+     */
     @FXML
     private ObservableList<Appointment> thisMonthsAppointments = FXCollections.observableArrayList(); //The observable list for this month's appointments.
+    /**
+     * The This weeks appointments.
+     */
     @FXML
     private ObservableList<Appointment> thisWeeksAppointments = FXCollections.observableArrayList(); //The observable list for this week's appointments.
+    /**
+     * The constant selectedAppointment.
+     */
     public static Appointment selectedAppointment; //The selected appointment.
 
     /**
@@ -111,6 +202,7 @@ public class MainMenuController implements Initializable { //This class is the c
     /**
      * On action monthly view.
      * When the monthly view radio button is selected, the table view is populated with this month's appointments.
+     *
      * @param event the event
      */
     @FXML
@@ -136,6 +228,7 @@ public class MainMenuController implements Initializable { //This class is the c
     /**
      * On action weekly view.
      * When the weekly view radio button is selected, the table view is populated with this week's appointments.
+     *
      * @param event the event
      */
     @FXML
@@ -161,6 +254,7 @@ public class MainMenuController implements Initializable { //This class is the c
     /**
      * On action modify appointment.
      * When the modify appointment button is clicked, the selected appointment is set to the selected appointment variable and the modify appointment screen is loaded.
+     *
      * @param event the event
      * @throws IOException the io exception
      */
@@ -187,6 +281,7 @@ public class MainMenuController implements Initializable { //This class is the c
     /**
      * On action view customers.
      * When the view customers button is clicked, the view customers screen is loaded.
+     *
      * @param event the event
      * @throws IOException the io exception
      */
@@ -198,6 +293,7 @@ public class MainMenuController implements Initializable { //This class is the c
     /**
      * On action delete appointment.
      * When the delete appointment button is clicked, the selected appointment is deleted from the database.
+     *
      * @param event the event
      * @throws SQLException the sql exception
      */
@@ -227,6 +323,7 @@ public class MainMenuController implements Initializable { //This class is the c
     /**
      * On action quit.
      * When the quit button is clicked, the application is closed and the user is logged out.
+     *
      * @param event the event
      * @throws IOException the io exception
      */
@@ -243,6 +340,7 @@ public class MainMenuController implements Initializable { //This class is the c
     /**
      * On action reports.
      * When the reports button is clicked, the reports screen is loaded.
+     *
      * @param event the event
      * @throws IOException the io exception
      */
@@ -254,6 +352,7 @@ public class MainMenuController implements Initializable { //This class is the c
     /**
      * On action schedule appointment.
      * When the schedule appointment button is clicked, the add appointment screen is loaded.
+     *
      * @param event the event
      * @throws IOException the io exception
      */
@@ -265,6 +364,7 @@ public class MainMenuController implements Initializable { //This class is the c
     /**
      * On action view all.
      * When the view all button is clicked, the table view is cleared and the appointments are refreshed.
+     *
      * @param event the event
      */
     @FXML
@@ -299,6 +399,7 @@ public class MainMenuController implements Initializable { //This class is the c
     /**
      * Initialize.
      * Initializes the main view.
+     *
      * @param url            the url
      * @param resourceBundle the resource bundle
      */

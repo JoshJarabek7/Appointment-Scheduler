@@ -11,15 +11,20 @@ import java.sql.SQLException;
 
 /**
  * Class for the country database
+ *
  * @author Joshua Jarabek
  */
 public class CountriesDB { //Class for the countries database
+    /**
+     * The constant countries.
+     */
     @FXML
     private static ObservableList<Countries> countries = FXCollections.observableArrayList(); //Observable list for the countries
 
     /**
      * Gets all countries.
      * Method for getting all countries
+     *
      * @return the all countries
      */
     public static ObservableList<Countries> getAllCountries() { //Method for getting all the countries

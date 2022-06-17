@@ -2,11 +2,21 @@ package model;
 
 /**
  * The class for the contact
+ *
  * @author Joshua Jarabek
  */
 public class Contact { //Class for the contact
+    /**
+     * The Id.
+     */
     private int id; //The contact ID
+    /**
+     * The Name.
+     */
     private String name; //The contact name
+    /**
+     * The Email.
+     */
     private String email; //The contact email
 
     /**
@@ -25,6 +35,7 @@ public class Contact { //Class for the contact
     /**
      * Gets id.
      * Method for getting the contact ID
+     *
      * @return the id
      */
     public int getId() { //Method for getting the contact ID
@@ -34,6 +45,7 @@ public class Contact { //Class for the contact
     /**
      * Gets name.
      * Method for getting the contact name
+     *
      * @return the name
      */
     public String getName() { //Method for getting the contact name
@@ -43,6 +55,7 @@ public class Contact { //Class for the contact
     /**
      * Gets email.
      * Method for getting the contact email
+     *
      * @return the email
      */
     public String getEmail() { //Method for getting the contact email
@@ -52,6 +65,7 @@ public class Contact { //Class for the contact
     /**
      * To string string.
      * Method for getting the contact as a string
+     *
      * @return the string
      */
     @Override

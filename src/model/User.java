@@ -4,11 +4,21 @@ import helper.UserDB;
 
 /**
  * The class for the user.
+ *
  * @author Joshua Jarabek
  */
 public class User { //Class for the user
+    /**
+     * The Id.
+     */
     private int id; //The user ID
+    /**
+     * The Username.
+     */
     private String username; //The user username
+    /**
+     * The Password.
+     */
     private String password; //The user password
 
     /**
@@ -27,6 +37,7 @@ public class User { //Class for the user
     /**
      * Gets id.
      * Method for getting the user ID
+     *
      * @return the id
      */
     public int getId() { //Method for getting the user ID
@@ -36,6 +47,7 @@ public class User { //Class for the user
     /**
      * Gets username.
      * Method for getting the user username
+     *
      * @return the username
      */
     public String getUsername() { //Method for getting the user username
@@ -45,6 +57,7 @@ public class User { //Class for the user
     /**
      * Gets password.
      * Method for getting the user password
+     *
      * @return the password
      */
     public String getPassword() { //Method for getting the user password
@@ -54,6 +67,7 @@ public class User { //Class for the user
     /**
      * Id to name string.
      * Method for getting the username from the user ID
+     *
      * @param id the id
      * @return the string
      */
@@ -69,6 +83,7 @@ public class User { //Class for the user
     /**
      * To string.
      * Method for getting the user as a string
+     *
      * @return the string
      */
     @Override

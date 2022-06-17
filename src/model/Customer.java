@@ -4,18 +4,49 @@ import java.time.LocalDateTime;
 
 /**
  * The class for the customer.
+ *
  * @author Joshua Jarabek
  */
 public class Customer { //Class for the customer
+    /**
+     * The Id.
+     */
     private int id; //The customer ID
+    /**
+     * The Name.
+     */
     private String name; //The customer name
+    /**
+     * The Address.
+     */
     private String address; //The customer address
+    /**
+     * The Postal code.
+     */
     private String postalCode; //The customer postal code
+    /**
+     * The Phone.
+     */
     private String phone; //The customer phone
+    /**
+     * The Division id.
+     */
     private int divisionId; //The customer division ID
+    /**
+     * The Create date.
+     */
     private LocalDateTime createDate; //The customer creation date
+    /**
+     * The Created by.
+     */
     private String createdBy; //The customer created by
+    /**
+     * The Updated by.
+     */
     private String updatedBy; //The customer updated by
+    /**
+     * The Last update.
+     */
     private LocalDateTime lastUpdate; //The customer last update
 
     /**
@@ -48,6 +79,7 @@ public class Customer { //Class for the customer
     /**
      * Gets id.
      * Method for getting the customer ID
+     *
      * @return the id
      */
     public int getId() { //Method for getting the customer ID
@@ -57,6 +89,7 @@ public class Customer { //Class for the customer
     /**
      * Gets name.
      * Method for getting the customer name
+     *
      * @return the name
      */
     public String getName() { //Method for getting the customer name
@@ -66,6 +99,7 @@ public class Customer { //Class for the customer
     /**
      * Gets address.
      * Method for getting the customer address
+     *
      * @return the address
      */
     public String getAddress() { //Method for getting the customer address
@@ -75,6 +109,7 @@ public class Customer { //Class for the customer
     /**
      * Gets postal code.
      * Method for getting the customer postal code
+     *
      * @return the postal code
      */
     public String getPostalCode() { //Method for getting the customer postal code
@@ -84,6 +119,7 @@ public class Customer { //Class for the customer
     /**
      * Gets phone.
      * Method for getting the customer phone
+     *
      * @return the phone
      */
     public String getPhone() { //Method for getting the customer phone
@@ -93,6 +129,7 @@ public class Customer { //Class for the customer
     /**
      * Gets division id.
      * Method for getting the customer division ID
+     *
      * @return the division id
      */
     public int getDivisionId() { //Method for getting the customer division ID
@@ -102,6 +139,7 @@ public class Customer { //Class for the customer
     /**
      * Gets create date.
      * Method for getting the customer creation date
+     *
      * @return the create date
      */
     public LocalDateTime getCreateDate() { //Method for getting the customer creation date
@@ -111,6 +149,7 @@ public class Customer { //Class for the customer
     /**
      * Gets created by.
      * Method for getting the customer created by
+     *
      * @return the created by
      */
     public String getCreatedBy() { //Method for getting the customer created by
@@ -120,6 +159,7 @@ public class Customer { //Class for the customer
     /**
      * Gets updated by.
      * Method for getting the customer updated by
+     *
      * @return the updated by
      */
     public String getUpdatedBy() { //Method for getting the customer updated by
@@ -129,6 +169,7 @@ public class Customer { //Class for the customer
     /**
      * Gets last update.
      * Method for getting the customer last update
+     *
      * @return the last update
      */
     public LocalDateTime getLastUpdate() { //Method for getting the customer last update
@@ -138,6 +179,7 @@ public class Customer { //Class for the customer
     /**
      * Sets id.
      * Method for setting the customer ID
+     *
      * @param id the id
      */
     public void setId(int id) { //Method for setting the customer ID
@@ -147,6 +189,7 @@ public class Customer { //Class for the customer
     /**
      * Sets name.
      * Method for setting the customer name
+     *
      * @param name the name
      */
     public void setName(String name) { //Method for setting the customer name
@@ -156,6 +199,7 @@ public class Customer { //Class for the customer
     /**
      * Sets address.
      * Method for setting the customer address
+     *
      * @param address the address
      */
     public void setAddress(String address) { //Method for setting the customer address
@@ -165,6 +209,7 @@ public class Customer { //Class for the customer
     /**
      * Sets postal code.
      * Method for setting the customer postal code
+     *
      * @param postalCode the postal code
      */
     public void setPostalCode(String postalCode) { //Method for setting the customer postal code
@@ -174,6 +219,7 @@ public class Customer { //Class for the customer
     /**
      * Sets phone.
      * Method for setting the customer phone
+     *
      * @param phone the phone
      */
     public void setPhone(String phone) { //Method for setting the customer phone
@@ -183,6 +229,7 @@ public class Customer { //Class for the customer
     /**
      * Sets division id.
      * Method for setting the customer division ID
+     *
      * @param divisionId the division id
      */
     public void setDivisionId(int divisionId) { //Method for setting the customer division ID
@@ -192,6 +239,7 @@ public class Customer { //Class for the customer
     /**
      * Sets create date.
      * Method for setting the customer creation date
+     *
      * @param createDate the create date
      */
     public void setCreateDate(LocalDateTime createDate) { //Method for setting the customer creation date
@@ -201,6 +249,7 @@ public class Customer { //Class for the customer
     /**
      * Sets created by.
      * Method for setting the customer created by
+     *
      * @param createdBy the created by
      */
     public void setCreatedBy(String createdBy) { //Method for setting the customer created by
@@ -210,6 +259,7 @@ public class Customer { //Class for the customer
     /**
      * Sets updated by.
      * Method for setting the customer updated by
+     *
      * @param updatedBy the updated by
      */
     public void setUpdatedBy(String updatedBy) { //Method for setting the customer updated by
@@ -219,6 +269,7 @@ public class Customer { //Class for the customer
     /**
      * Sets last update.
      * Method for setting the customer last update
+     *
      * @param lastUpdate the last update
      */
     public void setLastUpdate(LocalDateTime lastUpdate) { //Method for setting the customer last update
@@ -228,6 +279,7 @@ public class Customer { //Class for the customer
     /**
      * To string string.
      * Method for converting the customer to a string
+     *
      * @return the string
      */
     @Override

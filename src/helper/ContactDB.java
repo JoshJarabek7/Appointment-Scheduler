@@ -11,15 +11,20 @@ import java.sql.SQLException;
 
 /**
  * Class for the contact database
+ *
  * @author Joshua Jarabek
  */
 public class ContactDB { //Class for the contact database
+    /**
+     * The constant contacts.
+     */
     @FXML
     private static ObservableList<Contact> contacts = FXCollections.observableArrayList(); //Observable list for the contacts
 
     /**
      * Gets all contacts.
      * Method for getting all contacts
+     *
      * @return the all contacts
      */
     public static ObservableList<Contact> getAllContacts() { //Method for getting all contacts

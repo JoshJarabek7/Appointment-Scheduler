@@ -14,15 +14,20 @@ import java.time.LocalDateTime;
 
 /**
  * Class for the appointment database
+ *
  * @author Joshua Jarabek
  */
 public class AppointmentDB { //Class for the appointment database
+    /**
+     * The constant appointments.
+     */
     @FXML
     private static ObservableList<Appointment> appointments = FXCollections.observableArrayList(); //Observable list for the appointments
 
     /**
      * Method for getting all appointments
-     * @return ObservableList<Appointment> observable list
+     *
+     * @return ObservableList<Appointment>  observable list
      */
     public static ObservableList<Appointment> getAllAppointments(){ //Method for getting all appointments
         try { //Try to get all appointments
@@ -57,6 +62,7 @@ public class AppointmentDB { //Class for the appointment database
     /**
      * Add appointment.
      * Method for adding an appointment
+     *
      * @param appointment the appointment
      * @throws SQLException the sql exception
      */
@@ -82,6 +88,7 @@ public class AppointmentDB { //Class for the appointment database
     /**
      * Update appointment.
      * Method for updating an appointment
+     *
      * @param appointment the appointment
      * @throws SQLException the sql exception
      */
@@ -108,6 +115,7 @@ public class AppointmentDB { //Class for the appointment database
     /**
      * Delete appointment.
      * Method for deleting an appointment
+     *
      * @param appointmentId the appointment id
      * @throws SQLException the sql exception
      */

@@ -13,12 +13,14 @@ import java.util.ResourceBundle;
 
 /**
  * The class for Main.
+ *
  * @author Joshua Jarabek
  */
 public class Main extends Application { //Main class
     /**
      * Start.
      * This method is used to start the program.
+     *
      * @param primaryStage the primary stage to start the program
      * @throws Exception the exception if the program cannot be started
      */
@@ -34,6 +36,7 @@ public class Main extends Application { //Main class
     /**
      * Main.
      * This method is used to start the program.
+     *
      * @param args the args to start the program
      */
     public static void main(String[] args){ //Main method

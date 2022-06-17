@@ -2,11 +2,21 @@ package model;
 
 /**
  * The class for the division.
+ *
  * @author Joshua Jarabek
  */
 public class Division { //Class for the division
+    /**
+     * The Id.
+     */
     private int id; //The division ID
+    /**
+     * The Name.
+     */
     private String name; //The division name
+    /**
+     * The Country id.
+     */
     private int countryId; //The division country ID
 
     /**
@@ -25,6 +35,7 @@ public class Division { //Class for the division
     /**
      * Gets id.
      * Method for getting the division ID
+     *
      * @return the id
      */
     public int getId() { //Method for getting the division ID
@@ -34,6 +45,7 @@ public class Division { //Class for the division
     /**
      * Gets name.
      * Method for getting the division name
+     *
      * @return the name
      */
     public String getName() { //Method for getting the division name
@@ -43,6 +55,7 @@ public class Division { //Class for the division
     /**
      * Gets country id.
      * Method for getting the division country ID
+     *
      * @return the country id
      */
     public int getCountryId() { //Method for getting the division country ID
@@ -52,6 +65,7 @@ public class Division { //Class for the division
     /**
      * Sets name.
      * Method for setting the division name
+     *
      * @param name the name
      */
     public void setName(String name) { //Method for setting the division name
@@ -61,6 +75,7 @@ public class Division { //Class for the division
     /**
      * To string.
      * Method for getting the division as a string
+     *
      * @return the string
      */
     @Override

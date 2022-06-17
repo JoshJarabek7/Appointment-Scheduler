@@ -5,22 +5,65 @@ import java.time.LocalDateTime;
 
 /**
  * The Appointment class is used to create appointments.
+ *
  * @author Joshua Jarabek
  */
 public class Appointment { //Class for the appointment
+    /**
+     * The Appointment id.
+     */
     private int appointmentId; //The appointment ID
+    /**
+     * The Title.
+     */
     private String title; //The appointment title
+    /**
+     * The Description.
+     */
     private String description; //The appointment description
+    /**
+     * The Location.
+     */
     private String location; //The appointment location
+    /**
+     * The Type.
+     */
     private String type; //The appointment type
+    /**
+     * The Start date time.
+     */
     private LocalDateTime startDateTime; //The appointment start date and time
+    /**
+     * The End date time.
+     */
     private LocalDateTime endDateTime; //The appointment end date and time
+    /**
+     * The Customer id.
+     */
     private int customerId; //The appointment customer ID
+    /**
+     * The User id.
+     */
     private int userId; //The appointment user ID
+    /**
+     * The Contact id.
+     */
     private int contactId; //The appointment contact ID
+    /**
+     * The Create date.
+     */
     private LocalDateTime createDate; //The appointment creation date
+    /**
+     * The Last updated.
+     */
     private LocalDateTime lastUpdated; //The appointment last updated date
+    /**
+     * The Last updated by.
+     */
     private String lastUpdatedBy; //The appointment last updated by
+    /**
+     * The Created by.
+     */
     private String createdBy; //The appointment created by
 
     /**
@@ -61,6 +104,7 @@ public class Appointment { //Class for the appointment
     /**
      * Gets appointment id.
      * Method for getting the appointment ID.
+     *
      * @return the appointment id
      */
     public int getAppointmentId() { //Method for getting the appointment ID
@@ -70,6 +114,7 @@ public class Appointment { //Class for the appointment
     /**
      * Gets title.
      * Method for getting the appointment title.
+     *
      * @return the title
      */
     public String getTitle() { //Method for getting the appointment title
@@ -79,6 +124,7 @@ public class Appointment { //Class for the appointment
     /**
      * Gets description.
      * Method for getting the appointment description.
+     *
      * @return the description
      */
     public String getDescription() { //Method for getting the appointment description
@@ -88,6 +134,7 @@ public class Appointment { //Class for the appointment
     /**
      * Gets location.
      * Method for getting the appointment location.
+     *
      * @return the location
      */
     public String getLocation() { //Method for getting the appointment location
@@ -97,6 +144,7 @@ public class Appointment { //Class for the appointment
     /**
      * Gets type.
      * Method for getting the appointment type.
+     *
      * @return the type
      */
     public String getType() { //Method for getting the appointment type
@@ -106,6 +154,7 @@ public class Appointment { //Class for the appointment
     /**
      * Gets start date time.
      * Method for getting the appointment start date and time.
+     *
      * @return the start date time
      */
     public LocalDateTime getStartDateTime() { //Method for getting the appointment start date and time
@@ -115,6 +164,7 @@ public class Appointment { //Class for the appointment
     /**
      * Gets end date time.
      * Method for getting the appointment end date and time.
+     *
      * @return the end date time
      */
     public LocalDateTime getEndDateTime() { //Method for getting the appointment end date and time
@@ -124,6 +174,7 @@ public class Appointment { //Class for the appointment
     /**
      * Gets customer id.
      * Method for getting the appointment customer ID.
+     *
      * @return the customer id
      */
     public int getCustomerId() { //Method for getting the appointment customer ID
@@ -133,6 +184,7 @@ public class Appointment { //Class for the appointment
     /**
      * Gets user id.
      * Method for getting the appointment user ID.
+     *
      * @return the user id
      */
     public int getUserId() { //Method for getting the appointment user ID
@@ -142,6 +194,7 @@ public class Appointment { //Class for the appointment
     /**
      * Gets contact id.
      * Method for getting the appointment contact ID.
+     *
      * @return the contact id
      */
     public int getContactId() { //Method for getting the appointment contact ID
@@ -151,6 +204,7 @@ public class Appointment { //Class for the appointment
     /**
      * Gets create date.
      * Method for getting the appointment creation date.
+     *
      * @return the create date
      */
     public LocalDateTime getCreateDate() { //Method for getting the appointment creation date
@@ -160,6 +214,7 @@ public class Appointment { //Class for the appointment
     /**
      * Gets created by.
      * Method for getting the appointment created by.
+     *
      * @return the created by
      */
     public String getCreatedBy() { //Method for getting the appointment created by
@@ -169,6 +224,7 @@ public class Appointment { //Class for the appointment
     /**
      * Gets last updated.
      * Method for getting the appointment last updated date.
+     *
      * @return the last updated
      */
     public LocalDateTime getLastUpdated() { //Method for getting the appointment last updated date
@@ -178,6 +234,7 @@ public class Appointment { //Class for the appointment
     /**
      * Gets last updated by.
      * Method for getting the appointment last updated by.
+     *
      * @return the last updated by
      */
     public String getLastUpdatedBy() { //Method for getting the appointment last updated by
@@ -187,6 +244,7 @@ public class Appointment { //Class for the appointment
     /**
      * Sets title.
      * Method for setting the appointment title.
+     *
      * @param title the title
      */
     public void setTitle(String title) { //Method for setting the appointment title
@@ -196,6 +254,7 @@ public class Appointment { //Class for the appointment
     /**
      * Sets description.
      * Method for setting the appointment description.
+     *
      * @param description the description
      */
     public void setDescription(String description) { //Method for setting the appointment description
@@ -205,6 +264,7 @@ public class Appointment { //Class for the appointment
     /**
      * Sets location.
      * Method for setting the appointment location.
+     *
      * @param location the location
      */
     public void setLocation(String location) { //Method for setting the appointment location
@@ -214,6 +274,7 @@ public class Appointment { //Class for the appointment
     /**
      * Sets type.
      * Method for setting the appointment type.
+     *
      * @param type the type
      */
     public void setType(String type) { //Method for setting the appointment type
@@ -223,6 +284,7 @@ public class Appointment { //Class for the appointment
     /**
      * Sets start date time.
      * Method for setting the appointment start date and time.
+     *
      * @param startDateTime the start date time
      */
     public void setStartDateTime(LocalDateTime startDateTime) { //Method for setting the appointment start date and time
@@ -232,6 +294,7 @@ public class Appointment { //Class for the appointment
     /**
      * Sets end date time.
      * Method for setting the appointment end date and time.
+     *
      * @param endDateTime the end date time
      */
     public void setEndDateTime(LocalDateTime endDateTime) { //Method for setting the appointment end date and time
@@ -241,6 +304,7 @@ public class Appointment { //Class for the appointment
     /**
      * Sets customer id.
      * Method for setting the appointment customer ID.
+     *
      * @param customerId the customer id
      */
     public void setCustomerId(int customerId) { //Method for setting the appointment customer ID
@@ -250,6 +314,7 @@ public class Appointment { //Class for the appointment
     /**
      * Sets user id.
      * Method for setting the appointment user ID.
+     *
      * @param userId the user id
      */
     public void setUserId(int userId) { //Method for setting the appointment user ID
@@ -259,6 +324,7 @@ public class Appointment { //Class for the appointment
     /**
      * Sets contact id.
      * Method for setting the appointment contact ID.
+     *
      * @param contactId the contact id
      */
     public void setContactId(int contactId) { //Method for setting the appointment contact ID
@@ -268,6 +334,7 @@ public class Appointment { //Class for the appointment
     /**
      * Sets create date.
      * Method for setting the appointment creation date.
+     *
      * @param createDate the create date
      */
     public void setCreateDate(LocalDateTime createDate) { //Method for setting the appointment creation date
@@ -277,6 +344,7 @@ public class Appointment { //Class for the appointment
     /**
      * Sets last updated.
      * Method for setting the appointment last updated date.
+     *
      * @param lastUpdated the last updated
      */
     public void setLastUpdated(LocalDateTime lastUpdated) { //Method for setting the appointment last updated date
@@ -286,6 +354,7 @@ public class Appointment { //Class for the appointment
     /**
      * Sets last updated by.
      * Method for setting the appointment last updated by.
+     *
      * @param lastUpdatedBy the last updated by
      */
     public void setLastUpdatedBy(String lastUpdatedBy) { //Method for setting the appointment last updated by
@@ -295,6 +364,7 @@ public class Appointment { //Class for the appointment
     /**
      * Sets created by.
      * Method for setting the appointment created by.
+     *
      * @param createdBy the created by
      */
     public void setCreatedBy(String createdBy) { //Method for setting the appointment created by

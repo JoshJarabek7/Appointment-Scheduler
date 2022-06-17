@@ -13,17 +13,31 @@ import java.util.Optional;
  * Object-Oriented Programming is only helpful if you use it.
  * OOP makes your code more readable and easier to maintain.
  * Java can become spaghetti code very quickly.
+ *
  * @author Joshua Jarabek
  */
 public class AlertHelper { //AlertHelper is a helper class for the Alerts throughout the program.
+    /**
+     * The Title.
+     */
     private String title; //The title of the alert.
+    /**
+     * The Header.
+     */
     private String header; //The header of the alert.
+    /**
+     * The Content.
+     */
     private String content; //The content of the alert.
+    /**
+     * The Alert.
+     */
     private Alert alert; //The alert itself.
 
     /**
      * Instantiates a new Alert helper.
      * This constructor is used to create an alert.
+     *
      * @param title     the title of the alert.
      * @param header    the header of the alert.
      * @param content   the content of the alert.
@@ -39,6 +53,7 @@ public class AlertHelper { //AlertHelper is a helper class for the Alerts throug
     /**
      * Show alert.
      * This method is used to show the alert, as well as switch to the next scene.
+     *
      * @param event            the event
      * @param screenToSwitchTo the screen to switch to
      * @throws IOException the io exception
@@ -69,6 +84,7 @@ public class AlertHelper { //AlertHelper is a helper class for the Alerts throug
      * This method is used to get the result of the alert.
      * Some alerts have a button that the user can click, but also require to stay on the current screen.
      * This alleviates having 3 different methods for the same thing.
+     *
      * @return the result
      */
     public Optional<ButtonType> getResult() {

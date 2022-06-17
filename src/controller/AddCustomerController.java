@@ -22,38 +22,87 @@ import java.util.ResourceBundle;
 /**
  * This class is the controller for the add customer screen.
  * It handles the user input and calls the model to add the customer to the database.
+ *
  * @author Joshua Jarabek
  */
 public class AddCustomerController implements Initializable { //This class is the controller for the add customer screen.
+    /**
+     * The list of all divisions.
+     */
     ObservableList<Division> divisionsList = DivisionDB.getAllDivisions(); //The list of all divisions.
+    /**
+     * The button to save the customer.
+     */
     @FXML
     private Button addCustomerSave; //The button to save the customer.
+    /**
+     * The button to cancel the add customer operation.
+     */
     @FXML
     private Button addCustomerCancel; //The button to cancel the add customer operation.
+    /**
+     * The text field for the customer ID.
+     */
     @FXML
     private TextField addCustomerID; //The text field for the customer ID.
+    /**
+     * The name of the customer.
+     */
     @FXML
     private String name; //The name of the customer.
+    /**
+     * The Phone number of the customer.
+     */
     @FXML
     private String phone; //The phone number of the customer.
+    /**
+     * The Street address of the customer.
+     */
     @FXML
     private String street; //The street of the customer.
+    /**
+     * The Zip code of the customer.
+     */
     @FXML
     private String zip; //The zip code of the customer.
+    /**
+     * The Selected country of the customer.
+     */
     @FXML
     private Countries selectedCountry; //The selected country of the customer.
+    /**
+     * The Selected division of the customer.
+     */
     @FXML
     private Division selectedDivision; //The selected division of the customer.
+    /**
+     * The Add customer name text field.
+     */
     @FXML
     private TextField addCustomerName; //The text field for the name of the customer.
+    /**
+     * The Add customer phone text field.
+     */
     @FXML
     private TextField addCustomerPhone; //The text field for the phone number of the customer.
+    /**
+     * The Add customer street text field.
+     */
     @FXML
     private TextField addCustomerStreet; //The text field for the street of the customer.
+    /**
+     * The Add customer zip text field.
+     */
     @FXML
     private TextField addCustomerZip; //The text field for the zip code of the customer.
+    /**
+     * The Add customer country combo box.
+     */
     @FXML
     private ComboBox<Countries> addCustomerCountry; //The combo box for the country of the customer.
+    /**
+     * The Add customer division combo box.
+     */
     @FXML
     private ComboBox<Division> addCustomerDivision; //The combo box for the division of the customer.
 
@@ -73,6 +122,7 @@ public class AddCustomerController implements Initializable { //This class is th
     /**
      * Is valid boolean.
      * This method checks if the information is valid.
+     *
      * @return true if the information is valid, false if not.
      */
     private boolean isValid() { //Checks if the input info is valid.
@@ -140,6 +190,7 @@ public class AddCustomerController implements Initializable { //This class is th
      * On action cancel.
      * This method is called when the cancel button is clicked.
      * It cancels adding a customer.
+     *
      * @param event the event that is called when the button is clicked.
      * @throws IOException the io exception
      */
@@ -153,6 +204,7 @@ public class AddCustomerController implements Initializable { //This class is th
      * On action save.
      * This method is called when the save button is clicked.
      * It saves the customer.
+     *
      * @param event the event of the save button.
      * @throws SQLException the sql exception
      * @throws IOException  the io exception
@@ -180,6 +232,7 @@ public class AddCustomerController implements Initializable { //This class is th
     /**
      * Initialize.
      * This method is called when the view is initialized.
+     *
      * @param url            the url
      * @param resourceBundle the resource bundle
      */

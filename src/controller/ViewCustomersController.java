@@ -19,38 +19,87 @@ import java.util.ResourceBundle;
 
 /**
  * The ViewCustomersController class is the controller for the view customers scene.
+ *
  * @author Joshua Jarabek
  */
 public class ViewCustomersController implements Initializable { //Controller for the view customers scene
+    /**
+     * The constant selectedCustomer.
+     */
     public static Customer selectedCustomer; //Customer that is selected in the table
+    /**
+     * The Customer exit button.
+     */
     @FXML
     private Button customerExitButton; //Exit button
+    /**
+     * The Customer id col.
+     */
     @FXML
     private TableColumn<Customer, Integer> customerIdCol; //Customer ID column
+    /**
+     * The Customer name col.
+     */
     @FXML
     private TableColumn<Customer, String> customerNameCol; //Customer name column
+    /**
+     * The Customer zip col.
+     */
     @FXML
     private TableColumn<Customer, String> customerZipCol; //Customer zip column
+    /**
+     * The Customer phone col.
+     */
     @FXML
     private TableColumn<Customer, String> customerPhoneCol; //Customer phone column
+    /**
+     * The Customer address col.
+     */
     @FXML
     private TableColumn<Customer, String> customerAddressCol; //Customer address column
+    /**
+     * The Customer date created col.
+     */
     @FXML
     private TableColumn<Customer, String> customerDateCreatedCol; //Customer date created column
+    /**
+     * The Customer created by col.
+     */
     @FXML
     private TableColumn<Customer, String> customerCreatedByCol; //Customer created by column
+    /**
+     * The Customer last updated col.
+     */
     @FXML
     private TableColumn<Customer, LocalDateTime> customerLastUpdatedCol; //Customer last updated column
+    /**
+     * The Customer last updated by col.
+     */
     @FXML
     private TableColumn<Customer, String> customerLastUpdatedByCol; //Customer last updated by column
+    /**
+     * The Customer division id col.
+     */
     @FXML
     private TableColumn<Customer, Integer> customerDivisionIdCol; //Customer division ID column
+    /**
+     * The Add customer button.
+     */
     @FXML
     private Button addCustomerButton; //Add customer button
+    /**
+     * The Modify customer button.
+     */
     @FXML
     private Button modifyCustomerButton; //Modify customer button
+    /**
+     * The Delete customer button.
+     */
     @FXML
     private Button deleteCustomerButton; //Delete customer button
+    /**
+     * The Customer table.
+     */
     @FXML
     private TableView<Customer> customerTable; //Customer table
 
@@ -58,6 +107,7 @@ public class ViewCustomersController implements Initializable { //Controller for
      * On action add customer.
      * This method is called when the add customer button is clicked.
      * The method switches to the add customer scene.
+     *
      * @param event the add customer button is clicked
      * @throws IOException the io exception
      */
@@ -70,6 +120,7 @@ public class ViewCustomersController implements Initializable { //Controller for
      * On action delete customer.
      * This method is called when the delete customer button is clicked.
      * The method prompts the user to confirm the deletion of the customer.
+     *
      * @param event the event
      * @throws SQLException the sql exception
      * @throws IOException  the io exception
@@ -91,6 +142,7 @@ public class ViewCustomersController implements Initializable { //Controller for
      * On action exit.
      * This method is called when the exit button is clicked.
      * The method switches to the main menu scene.
+     *
      * @param event the event
      * @throws IOException the io exception
      */
@@ -103,6 +155,7 @@ public class ViewCustomersController implements Initializable { //Controller for
      * On action modify customer.
      * This method is called when the "modify customer" button is clicked.
      * The method switches to the "modify customer" scene.
+     *
      * @param event the event
      * @throws IOException the io exception
      */
@@ -116,6 +169,7 @@ public class ViewCustomersController implements Initializable { //Controller for
      * Initialize.
      * This method is called when the scene is initialized.
      * The method adds all customers to the table.
+     *
      * @param url            the url
      * @param resourceBundle the resource bundle
      */

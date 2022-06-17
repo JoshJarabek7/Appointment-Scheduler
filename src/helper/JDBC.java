@@ -5,16 +5,41 @@ import java.sql.DriverManager;
 
 /**
  * The class for the database
+ *
  * @author Joshua Jarabek
  */
 public abstract class JDBC { //Class for the JDBC
+    /**
+     * The constant protocol.
+     */
     private static final String protocol = "jdbc";  //The protocol
+    /**
+     * The constant vendor.
+     */
     private static final String vendor = ":mysql:"; //The vendor
+    /**
+     * The constant location.
+     */
     private static final String location = "//localhost/"; //The location
+    /**
+     * The constant databaseName.
+     */
     private static final String databaseName = "client_schedule"; //The database name
+    /**
+     * The constant jdbcUrl.
+     */
     private static final String jdbcUrl = protocol + vendor + location + databaseName + "?connectionTimeZone = SERVER"; //LOCAL
+    /**
+     * The constant driver.
+     */
     private static final String driver = "com.mysql.cj.jdbc.Driver"; //Driver reference
+    /**
+     * The constant userName.
+     */
     private static final String userName = "sqlUser"; //Username
+    /**
+     * The constant conn.
+     */
     public static Connection conn;  //Connection Interface
 
     /**
@@ -36,6 +61,7 @@ public abstract class JDBC { //Class for the JDBC
     /**
      * Gets connection.
      * Method for getting the connection
+     *
      * @return the connection
      */
     public static Connection getConnection() { //Method for getting the connection

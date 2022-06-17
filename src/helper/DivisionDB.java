@@ -11,15 +11,20 @@ import java.sql.SQLException;
 
 /**
  * Class for the division database
+ *
  * @author Joshua Jarabek
  */
 public class DivisionDB { //Class for the division database
+    /**
+     * The constant divisions.
+     */
     @FXML
     private static ObservableList<Division> divisions = FXCollections.observableArrayList(); //Observable list for the divisions
 
     /**
      * Gets all divisions.
      * Method for getting all divisions
+     *
      * @return all divisions
      */
     public static ObservableList<Division> getAllDivisions() { //Method for getting all the divisions

@@ -25,56 +25,155 @@ import java.util.ResourceBundle;
  * The class UpdateAppointmentController is the controller for the update appointment view.
  */
 public class UpdateAppointmentController implements Initializable { //This class is the controller for the Update Appointment Screen.
+    /**
+     * The constant selectedAppointment.
+     */
     public static Appointment selectedAppointment = MainMenuController.selectedAppointment; //Creates a static appointment object for the selected appointment.
+    /**
+     * The Modify appointment cancel.
+     */
     @FXML
     private Button modifyAppointmentCancel; //The button to cancel the updating of the appointment.
+    /**
+     * The Modify appointment save.
+     */
     @FXML
     private Button modifyAppointmentSave; //The button to save the updated appointment.
+    /**
+     * The Modify appointment id.
+     */
     @FXML
     private TextField modifyAppointmentID; //The text field for the appointment ID of the appointment.
+    /**
+     * The Modify appointment customer id.
+     */
     @FXML
     private ComboBox<Customer> modifyAppointmentCustomerID; //The combo box for the customer ID of the appointment.
+    /**
+     * The Modify appointment user.
+     */
     @FXML
     private ComboBox<User> modifyAppointmentUser; //The combo box for the user of the appointment.
+    /**
+     * The Modify appointment title.
+     */
     @FXML
     private TextField modifyAppointmentTitle; //The text field for the title of the appointment.
+    /**
+     * The Modify appointment description.
+     */
     @FXML
     private TextField modifyAppointmentDescription; //The text field for the description of the appointment.
+    /**
+     * The Modify appointment location.
+     */
     @FXML
     private TextField modifyAppointmentLocation; //The text field for the location of the appointment.
+    /**
+     * The Modify appointment contact.
+     */
     @FXML
     private ComboBox<Contact> modifyAppointmentContact; //The combo box for the contact of the appointment.
+    /**
+     * The Modify appointment type.
+     */
     @FXML
     private ComboBox<String> modifyAppointmentType; //The combo box for the type of the appointment.
+    /**
+     * The Modify appointment date.
+     */
     @FXML
     private DatePicker modifyAppointmentDate; //The date picker for the date of the appointment.
+    /**
+     * The Modify appointment start.
+     */
     @FXML
     private ComboBox<LocalTime> modifyAppointmentStart; //The combo box for the start time of the appointment.
+    /**
+     * The Modify appointment end.
+     */
     @FXML
     private ComboBox<LocalTime> modifyAppointmentEnd; //The combo box for the end time of the appointment.
+    /**
+     * The Types.
+     */
     @FXML
     private ObservableList<String> types = FXCollections.observableArrayList(); //Creates an observable list of all the types of appointments.
+    /**
+     * The Customers.
+     */
     @FXML
     private ObservableList<Customer> customers = FXCollections.observableArrayList(); //Creates an observable list for all the customers.
+    /**
+     * The Users.
+     */
     @FXML
     private ObservableList<User> users = FXCollections.observableArrayList(); //Creates an observable list for all the users.
+    /**
+     * The Contacts.
+     */
     @FXML
     private ObservableList<Contact> contacts = FXCollections.observableArrayList(); //Creates an observable list for all the contacts.
+    /**
+     * The Appointment list.
+     */
     @FXML
     private ObservableList<Appointment> appointmentList = AppointmentDB.getAllAppointments(); //Creates an observable list of all appointments.
+    /**
+     * The Start.
+     */
     private LocalTime start = LocalTime.of(4, 0); //Create a local time object for the business start time.
+    /**
+     * The End.
+     */
     private LocalTime end = LocalTime.of(23, 0); //Creates a local time object for the business end time.
+    /**
+     * The Customer.
+     */
     private Customer customer; //Creates a customer object.
+    /**
+     * The User.
+     */
     private User user; //Creates a user object.
+    /**
+     * The Title.
+     */
     private String title; //Creates a string for the title of the appointment.
+    /**
+     * The Description.
+     */
     private String description; //Creates a string for the description of the appointment.
+    /**
+     * The Location.
+     */
     private String location; //Creates a string for the location of the appointment.
+    /**
+     * The Contact.
+     */
     private Contact contact; //Creates a contact object.
+    /**
+     * The Type.
+     */
     private String type; //Creates a string for the type of the appointment.
+    /**
+     * The Date.
+     */
     private LocalDate date; //Creates a local date object for the date of the appointment.
+    /**
+     * The Start time.
+     */
     private LocalTime startTime; //Creates a local time object for the start time of the appointment.
+    /**
+     * The End time.
+     */
     private LocalTime endTime; //Creates a local time object for the end time of the appointment.
+    /**
+     * The Start date time.
+     */
     private LocalDateTime startDateTime; //Creates a local date time object for the start date time of the appointment.
+    /**
+     * The End date time.
+     */
     private LocalDateTime endDateTime; //Creates a local date time object for the end date time of the appointment.
 
     /**

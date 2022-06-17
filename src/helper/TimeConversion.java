@@ -10,12 +10,14 @@ import java.time.format.DateTimeFormatter;
  * The TimeConversion class is used to convert times.
  * It's not necessary to create an instance of this class, but it makes it easier to convert times.
  * Especially in the case of this program, where the time zones are often different, it makes it easier to convert times.
+ *
  * @author Joshua Jarabek
  */
 public class TimeConversion { //Class for converting times
     /**
      * Format date string.
      * This method is used to format a date string.
+     *
      * @param localDateTime the local date time to format
      * @return the string of the formatted date
      */
@@ -27,6 +29,7 @@ public class TimeConversion { //Class for converting times
     /**
      * Format time string.
      * This method is used to format a time string.
+     *
      * @param localDateTime the local date time to format
      * @return the string of the formatted time
      */
@@ -38,6 +41,7 @@ public class TimeConversion { //Class for converting times
     /**
      * Format time string.
      * This method is used to format a time string.
+     *
      * @param localTime the local time to format
      * @return the string of the formatted time
      */
@@ -49,6 +53,7 @@ public class TimeConversion { //Class for converting times
     /**
      * Format time string.
      * This method is used to format a time string.
+     *
      * @param zonedDateTime the zoned date time to format
      * @return the string of the formatted time
      */
@@ -60,6 +65,7 @@ public class TimeConversion { //Class for converting times
     /**
      * Populate times combo box.
      * This method is used to populate a combo box with times.
+     *
      * @param localTimeComboBox the local time combo box to populate
      * @param startTime         the start time of the combo box
      * @param endTime           the end time of the combo box
@@ -75,6 +81,7 @@ public class TimeConversion { //Class for converting times
     /**
      * Convert local to eastern local date time.
      * This method is used to convert a local date time to eastern local date time.
+     *
      * @param timeToConvert the time to convert to eastern local date time
      * @return the local date time in eastern local date time
      */
@@ -89,6 +96,7 @@ public class TimeConversion { //Class for converting times
     /**
      * Compare with business hours boolean.
      * This method is used to compare a time with business hours.
+     *
      * @param timeToCompare the time to compare with business hours
      * @return the boolean of whether the time is within business hours
      */

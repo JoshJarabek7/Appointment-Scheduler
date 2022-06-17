@@ -26,52 +26,140 @@ import java.util.ResourceBundle;
 /**
  * This class is the controller for the add appointment view.
  * It handles the user input and calls the model to add the appointment.
+ *
  * @author Joshua Jarabek
  */
 public class AddAppointmentController implements Initializable { //Controller for the add appointment view
+    /**
+     * The cancel button on the add appointment view.
+     */
     @FXML
     private Button addAppointmentCancel; //Button for canceling the add appointment view.
+    /**
+     * The save button on the add appointment view.
+     */
     @FXML
     private Button addAppointmentSave; //Button for adding the appointment.
+    /**
+     * The id text field on the add appointment view.
+     */
     @FXML
     private TextField addAppointmentID; //Non-editable text field for the appointment id.
+    /**
+     * The customer combo box on the add appointment view.
+     */
     @FXML
     private ComboBox<Customer> addAppointmentCustomerID; //Combo box for the customer id.
+    /**
+     * The title text field on the add appointment view.
+     */
     @FXML
     private ComboBox<User> addAppointmentUser; //Combo box for the user id.
+    /**
+     * The title text field on the add appointment view.
+     */
     @FXML
     private TextField addAppointmentTitle; //Text field for the appointment title.
+    /**
+     * The description text field on the add appointment view.
+     */
     @FXML
     private TextField addAppointmentDescription; //Text field for the appointment description.
+    /**
+     * The location text field on the add appointment view.
+     */
     @FXML
     private TextField addAppointmentLocation; //Text field for the appointment location.
+    /**
+     * The contact combo box on the add appointment view.
+     */
     @FXML
     private ComboBox<Contact> addAppointmentContact; //Combo box for the contact id.
+    /**
+     * The type combo box on the add appointment view.
+     */
     @FXML
     private ComboBox<String> addAppointmentType; //Combo box for the appointment type.
+    /**
+     * The date picker on the add appointment view.
+     */
     @FXML
     private DatePicker addAppointmentDate; //Date picker for the appointment date.
+    /**
+     * The start time combo box on the add appointment view.
+     */
     @FXML
     private ComboBox<LocalTime> addAppointmentStart; //Combo box for the appointment start time.
+    /**
+     * The end time combo box on the add appointment view.
+     */
     @FXML
     private ComboBox<LocalTime> addAppointmentEnd; //Combo box for the appointment end time.
+    /**
+     * The types observable list.
+     */
     @FXML
     private ObservableList<String> types = FXCollections.observableArrayList(); //List of appointment types.
+    /**
+     * The appointment observable list.
+     */
     @FXML
     private ObservableList<Appointment> appointmentsList = AppointmentDB.getAllAppointments(); //List of all appointments.
+    /**
+     * The earliest time on the combo box.
+     */
     private LocalTime start = LocalTime.of(4, 0); //Earliest start time in combo box.
+    /**
+     * The latest time on the combo box.
+     */
     private LocalTime end = LocalTime.of(23, 0); //Earliest end time in combo box.
+    /**
+     * The Customer object.
+     */
     private Customer customer; //Customer object for the selected customer.
+    /**
+     * The User object.
+     */
     private User user; //User object for the selected user.
+    /**
+     * The Contact object.
+     */
     private Contact contact; //Contact object for the selected contact.
+    /**
+     * The type variable.
+     */
     private String type; //String for the selected appointment type.
+    /**
+     * The Title variable.
+     */
     private String title; //String for the appointment title.
+    /**
+     * The Description variable.
+     */
     private String description; //String for the appointment description.
+    /**
+     * The Location variable.
+     */
     private String location; //String for the appointment location.
+    /**
+     * The Start time variable.
+     */
     private LocalTime startTime; //Local time for the appointment start time.
+    /**
+     * The End time variable.
+     */
     private LocalTime endTime; //Local time for the appointment end time.
+    /**
+     * The Date variable.
+     */
     private LocalDate date; //Local date for the appointment date.
+    /**
+     * The Start date time variable.
+     */
     private LocalDateTime startDateTime; //Local date time for the appointment start date time.
+    /**
+     * The End date time variable.
+     */
     private LocalDateTime endDateTime; //Local date time for the appointment end date time.
 
     /**
@@ -94,6 +182,7 @@ public class AddAppointmentController implements Initializable { //Controller fo
     /**
      * Validate time boolean.
      * This method is used for validating the time.
+     *
      * @return boolean as true if the start time is before the end time, false otherwise.
      */
     private boolean validateTime() { //Method for validating the time entered in according to the business hours.
@@ -105,6 +194,7 @@ public class AddAppointmentController implements Initializable { //Controller fo
     /**
      * Validate info boolean.
      * This method is used for validating the information entered by the user.
+     *
      * @return the boolean as true if the appointment information is valid, false otherwise.
      */
     private boolean validateInfo() { //Returns true if the input info is valid.
@@ -141,6 +231,7 @@ public class AddAppointmentController implements Initializable { //Controller fo
     /**
      * Overlap boolean.
      * This method is used for checking if the appointment overlaps with another appointment.
+     *
      * @return the boolean as true if the appointment does not overlap with another appointment, false otherwise.
      */
     private boolean overlap() { //Checks if the appointment time overlaps with another appointment.
@@ -164,6 +255,7 @@ public class AddAppointmentController implements Initializable { //Controller fo
     /**
      * On action cancel.
      * This method is called when the user clicks the cancel button.
+     *
      * @param event the event that triggered the method.
      * @throws IOException the io exception
      */
@@ -176,6 +268,7 @@ public class AddAppointmentController implements Initializable { //Controller fo
     /**
      * On action save.
      * This method is called when the user clicks the save button.
+     *
      * @param event the event that triggered the method.
      * @throws IOException  the io exception
      * @throws SQLException the sql exception
@@ -207,6 +300,7 @@ public class AddAppointmentController implements Initializable { //Controller fo
     /**
      * Initialize.
      * This method is called when the view is initialized.
+     *
      * @param url            the url
      * @param resourceBundle the resource bundle
      */

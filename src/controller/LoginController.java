@@ -22,34 +22,75 @@ import java.util.ResourceBundle;
 
 /**
  * The class LoginController is used to control the login screen.
+ *
  * @author Joshua Jarabek
  */
 public class LoginController implements Initializable { //This class is the controller for the login screen.
+    /**
+     * The Appointment scheduler label.
+     */
     @FXML
     private Label appointmentSchedulerLabel; //The title label for the appointment scheduler program.
+    /**
+     * The Login login button.
+     */
     @FXML
     private Button loginLoginButton; //The button to login.
+    /**
+     * The Login reset button.
+     */
     @FXML
     private Button loginResetButton; //The button to reset the login information.
+    /**
+     * The Password label.
+     */
     @FXML
     private Label passwordLabel; //The label for the password field.
+    /**
+     * The Username label.
+     */
     @FXML
     private Label usernameLabel; //The label for the username field.
+    /**
+     * The Time zone label.
+     */
     @FXML
     private Label timeZoneLabel; //The label for the time zone field.
+    /**
+     * The Username field.
+     */
     @FXML
     private TextField usernameField; //The text field for the username input.
+    /**
+     * The Password field.
+     */
     @FXML
     private PasswordField passwordField; //The text field for the password input.
+    /**
+     * The Login validation.
+     */
     public boolean loginValidation = false; //Sets the initial value of the login validation to false.
+    /**
+     * The Now.
+     */
     LocalDateTime now = LocalDateTime.now(); //Gets the current time and stores it in the variable now.
+    /**
+     * The Appointments.
+     */
     ObservableList<Appointment> appointments = AppointmentDB.getAllAppointments(); //Creates an observable list of all appointments.
+    /**
+     * The Users.
+     */
     static ObservableList<User> users = UserDB.getAllUsers(); //Creates an observable list of all users.
+    /**
+     * The constant activeUserId.
+     */
     private static int activeUserId = 0; //Sets the initial value of the active user ID to 0.
 
     /**
      * On action reset.
      * Resets the login information.
+     *
      * @param event The event that triggers the method is the reset button is clicked.
      */
     public void onActionReset(ActionEvent event) { //This method is called when the reset button is clicked.
@@ -72,6 +113,7 @@ public class LoginController implements Initializable { //This class is the cont
      * The active userID is later used to determine which user is logged in.
      * This allows us to use the active user ID later on in the program for different purposes.
      * </p>
+     *
      * @param event the event that triggers the method is the login button is clicked.
      * @throws IOException the io exception
      */
@@ -105,6 +147,7 @@ public class LoginController implements Initializable { //This class is the cont
     /**
      * Validate login boolean.
      * Checks if the login information is valid.
+     *
      * @param enteredUsername the entered username
      * @param enteredPassword the entered password
      * @return the boolean as true if the login information is valid, false if it is not.
@@ -120,6 +163,7 @@ public class LoginController implements Initializable { //This class is the cont
     /**
      * Gets active user id.
      * Gets the active user ID.
+     *
      * @return the active user id
      */
     public static int getActiveUserId() { //This method returns the active user ID.
@@ -134,6 +178,7 @@ public class LoginController implements Initializable { //This class is the cont
     /**
      * Gets active id string.
      * Gets the active user ID as a string.
+     *
      * @return the active id string
      */
     public static String getActiveIdString() { //This method gets the active user ID to be used in other methods.
@@ -148,6 +193,7 @@ public class LoginController implements Initializable { //This class is the cont
     /**
      * Gets active username.
      * Gets the active user's username.
+     *
      * @return the active username
      */
     public static String getActiveUsername() { //This method gets the active username to be used in other methods.
@@ -162,6 +208,8 @@ public class LoginController implements Initializable { //This class is the cont
     /**
      * Check upcoming appointments.
      * Checks if there are any upcoming appointments to alert the user.
+     *
+     * @param event the event
      * @throws IOException the io exception
      */
     public void checkUpcomingAppointments(ActionEvent event) throws IOException { //This method is called when the login button is clicked and checks if there are any upcoming appointments to alert the user of.
@@ -179,16 +227,8 @@ public class LoginController implements Initializable { //This class is the cont
     /**
      * LAMBDA EXPRESSION: Log activity.
      * Logs the login activity to a text file.
-     * @throws IOException the io exception
      *
-     * <p>
-     * The method is called when the login button is clicked.
-     * The method logs the login activity to a text file.
-     * The file writer and print writer are used to write to the login activity text file.
-     * The runnable and string are used to get the message to be logged.
-     * The print writer prints the message to the login activity text file.
-     * The thread is used to log the message.
-     * </p>
+     * @throws IOException the io exception <p> The method is called when the login button is clicked. The method logs the login activity to a text file. The file writer and print writer are used to write to the login activity text file. The runnable and string are used to get the message to be logged. The print writer prints the message to the login activity text file. The thread is used to log the message. </p>
      */
 //LAMBDA EXPRESSION
     public void logActivity() throws IOException { //This method is called when the login button is clicked and logs the login activity to a text file.
@@ -204,6 +244,7 @@ public class LoginController implements Initializable { //This class is the cont
     /**
      * Initialize.
      * Initializes the login screen.
+     *
      * @param url            the url
      * @param resourceBundle the resource bundle
      */

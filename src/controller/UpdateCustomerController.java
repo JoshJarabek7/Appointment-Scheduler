@@ -23,41 +23,96 @@ import java.util.ResourceBundle;
 
 /**
  * The class UpdateCustomerController is used to update a customer.
+ *
  * @author Joshua Jarabek
  */
 public class UpdateCustomerController implements Initializable { //This class is the controller for the update customer screen.
+    /**
+     * The Selected customer id.
+     */
     public int selectedCustomerId = ViewCustomersController.selectedCustomer.getId(); //The selected customer's ID.
+    /**
+     * The Selected country.
+     */
     public Countries selectedCountry; //The selected country of the customer.
+    /**
+     * The Modify customer save.
+     */
     @FXML
     private Button modifyCustomerSave; //The button to save the customer.
+    /**
+     * The Modify customer cancel.
+     */
     @FXML
     private Button modifyCustomerCancel; //The button to cancel the update customer operation.
+    /**
+     * The Name.
+     */
     @FXML
     private String name; //The name of the customer.
+    /**
+     * The Phone.
+     */
     @FXML
     private String phone; //The phone number of the customer.
+    /**
+     * The Zip.
+     */
     @FXML
     private String zip; //The zip code of the customer.
+    /**
+     * The Full address.
+     */
     @FXML
     private String fullAddress; //The full address of the customer.
+    /**
+     * The Selected division.
+     */
     @FXML
     private Division selectedDivision; //The selected division of the customer.
+    /**
+     * The Modify customer id.
+     */
     @FXML
     private TextField modifyCustomerID; //The text field for the customer ID.
+    /**
+     * The Modify customer name.
+     */
     @FXML
     private TextField modifyCustomerName; //The text field for the name of the customer.
+    /**
+     * The Modify customer phone.
+     */
     @FXML
     private TextField modifyCustomerPhone; //The text field for the phone number of the customer.
+    /**
+     * The Modify customer street.
+     */
     @FXML
     private TextField modifyCustomerStreet; //The text field for the street of the customer.
+    /**
+     * The Modify customer zip.
+     */
     @FXML
     private TextField modifyCustomerZip; //The text field for the zip code of the customer.
+    /**
+     * The Modify customer country.
+     */
     @FXML
     private ComboBox<Countries> modifyCustomerCountry; //The combo box for the country of the customer.
+    /**
+     * The Modify customer division.
+     */
     @FXML
     private ComboBox<Division> modifyCustomerDivision; //The combo box for the division of the customer.
+    /**
+     * The Divisions list.
+     */
     @FXML
     private ObservableList<Division> divisionsList = DivisionDB.getAllDivisions(); //The list of all divisions.
+    /**
+     * The Countries list.
+     */
     @FXML
     private ObservableList<Countries> countriesList = CountriesDB.getAllCountries(); //The list of all countries.
 
@@ -77,6 +132,7 @@ public class UpdateCustomerController implements Initializable { //This class is
     /**
      * Is valid boolean.
      * When this method is called, the information in the text fields and combo boxes are checked to see if it is valid.
+     *
      * @return the boolean true if the information is valid, false if it is not.
      */
     private boolean isValid() { //Checks if the information is valid.
@@ -99,33 +155,34 @@ public class UpdateCustomerController implements Initializable { //This class is
      * When this method is called, the country combo box is updated to show the correct countries for the selected division.
      *
      * <p>
-     *  - The method is called when the user selects a country in the customer view.
-     *  - The method needs to call a new method (`updateDivisions`) that is used for updating the division combo box.
-     *  - The method needs to check the country id to determine which division should be added to the combo box.
-     *  - The method needs to loop through the division list and add the correct division to the combo box.
+     * - The method is called when the user selects a country in the customer view.
+     * - The method needs to call a new method (`updateDivisions`) that is used for updating the division combo box.
+     * - The method needs to check the country id to determine which division should be added to the combo box.
+     * - The method needs to loop through the division list and add the correct division to the combo box.
      * </p>
-     *
+     * <p>
      * If this was done with a for-loop, it would be written as follows:
      *
      * <code>
      * for (int i = 0; i < divisionsList.size(); i++) {
-     *     if (selectedCountry.getId() == 1) {
-     *         if (divisionsList.get(i).getCountryId() == 1) {
-     *             modifyCustomerDivision.getItems().add(divisionsList.get(i));
-     *         }
-     *     } else if (selectedCountry.getId() == 2) {
-     *         if (divisionsList.get(i).getCountryId() == 2) {
-     *             modifyCustomerDivision.getItems().add(divisionsList.get(i));
-     *         }
-     *     } else if (selectedCountry.getId() == 3) {
-     *         if (divisionsList.get(i).getCountryId() == 3) {
-     *             modifyCustomerDivision.getItems().add(divisionsList.get(i));
-     *         }
-     *     }
+     * if (selectedCountry.getId() == 1) {
+     * if (divisionsList.get(i).getCountryId() == 1) {
+     * modifyCustomerDivision.getItems().add(divisionsList.get(i));
      * }
-     *</code>
-     *
+     * } else if (selectedCountry.getId() == 2) {
+     * if (divisionsList.get(i).getCountryId() == 2) {
+     * modifyCustomerDivision.getItems().add(divisionsList.get(i));
+     * }
+     * } else if (selectedCountry.getId() == 3) {
+     * if (divisionsList.get(i).getCountryId() == 3) {
+     * modifyCustomerDivision.getItems().add(divisionsList.get(i));
+     * }
+     * }
+     * }
+     * </code>
+     * <p>
      * As you can see, the lambda expression is much more concise and readable compared to the for-loop.
+     *
      * @param event the select country box is changed.
      */
     @FXML
@@ -160,6 +217,7 @@ public class UpdateCustomerController implements Initializable { //This class is
     /**
      * On action cancel.
      * When this method is called, the updating of the customer is cancelled and the user is taken back to the customer view.
+     *
      * @param event the cancel button is clicked.
      * @throws IOException the io exception
      */
@@ -172,6 +230,7 @@ public class UpdateCustomerController implements Initializable { //This class is
     /**
      * On action save.
      * When this method is called, the customer is updated and the user is taken back to the customer view.
+     *
      * @param event the event
      * @throws SQLException the sql exception
      * @throws IOException  the io exception
@@ -211,9 +270,10 @@ public class UpdateCustomerController implements Initializable { //This class is
      * The method then sets the selected country to the country.
      * The method then uses a lambda expression to loop through the divisions list and add the divisions to the combo box.
      * The method then catches a null pointer exception if the customer's division is null.
-     *
+     * <p>
      * The lambda expression is important because it allows me to loop through the divisions list and add the divisions to the combo box.
-     * </p> 
+     * </p>
+     *
      * @param selectCustomer the select customer
      */
     private void transferCustomer(Customer selectCustomer) { //Transfers the selected customer's information to the text fields and combo boxes.
@@ -269,6 +329,7 @@ public class UpdateCustomerController implements Initializable { //This class is
     /**
      * Initialize.
      * This method is called automatically when the fxml file is loaded.
+     *
      * @param url            the url
      * @param resourceBundle the resource bundle
      */

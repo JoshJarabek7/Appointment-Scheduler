@@ -14,15 +14,20 @@ import java.time.LocalDateTime;
 
 /**
  * Class for the customer database
+ *
  * @author Joshua Jarabek
  */
 public class CustomerDB { //Class for the customer database
+    /**
+     * The constant customers.
+     */
     @FXML
     private static ObservableList<Customer> customers = FXCollections.observableArrayList(); //Observable list for the customers
 
     /**
      * Gets all customers.
      * Method for getting all customers
+     *
      * @return all customers
      */
     public static ObservableList<Customer> getAllCustomers() { //Method for getting all customers
@@ -54,6 +59,7 @@ public class CustomerDB { //Class for the customer database
     /**
      * Add customer.
      * Method for adding a customer
+     *
      * @param customer the customer
      * @throws SQLException the sql exception
      */
@@ -75,6 +81,7 @@ public class CustomerDB { //Class for the customer database
     /**
      * Delete customer.
      * Method for deleting a customer
+     *
      * @param customer the customer
      * @throws SQLException the sql exception
      */
@@ -88,6 +95,7 @@ public class CustomerDB { //Class for the customer database
     /**
      * Update customer.
      * Method for updating a customer
+     *
      * @param customer the customer
      * @throws SQLException the sql exception
      */
