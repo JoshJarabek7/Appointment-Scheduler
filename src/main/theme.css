@@ -1,0 +1,150 @@
+
+root {
+@font-face {
+font-family:"LemonMilkBold";
+src: url("LemonMilkBold-gx2B3.ttf");
+}
+@font-face {
+font-family:"LemonMilkRegular";
+src: url('LemonMilkRegular-X3XE2.ttf');
+}
+}
+
+.button {
+    -fx-background-color: #8AB6F9;
+    -fx-text-fill: #00246B;
+    -fx-font-family: LemonMilkBold;
+    -fx-font-size: 25px;
+    -fx-background-radius: 25px;
+    }
+
+.anchor-pane {
+    -fx-background-color: #CADCFC;
+    }
+
+.grid-pane {
+    -fx-background-color: #CADCFC;
+    -fx-text-fill: #00246B;
+    -fx-font-fill: #00246B;
+    -fx-font-family: LemonMilkBold;
+    -fx-font-size: 24px;
+    -fx-prompt-text-fill: #00246B;
+}
+
+.text-field {
+    -fx-text-size: 24px;
+    -fx-font-size: 24px;
+    -fx-font-fill: #CADCFC;
+    -fx-prompt-text-fill: #CADCFC;
+    -fx-background-color: white;
+    -fx-background-radius: 25px;
+    -fx-font-family: "LemonMilkBold";
+}
+
+.text {
+    -fx-text-size: 24px;
+    -fx-font-size: 24px;
+    -fx-fill: #00246B;
+    -fx-font-fill: #00246B;
+    -fx-font-family: "LemonMilkBold";
+}
+
+.password-field {
+    -fx-text-size: 24px;
+    -fx-font-size: 24px;
+    -fx-text-fill: #CADCFC;
+    -fx-prompt-text-fill: #CADCFC;
+    -fx-background-color: white;
+    -fx-font-family: "LemonMilkBold";
+}
+
+.table-view {
+    -fx-background-color: lightgrey;
+    -fx-background-radius: 25px;
+    /* highlight selected row #CADCFC */
+
+
+    }
+
+
+.table-view .column-header-background .nested-column-header .table-column .label .text{
+    -fx-text-fill: #00246B;
+    -fx-font-family: "LemonMilkBold";
+    -fx-font-size: 16px;
+    -fx-text-alignment: center;
+    }
+
+.table-view .column-header-background .nested-column-header {
+    -fx-region-background-radius: 25px;
+    }
+
+
+.label {
+    -fx-text-size: 24px;
+    -fx-font-size: 24px;
+    -fx-text-fill: #00246B;
+    -fx-font-fill: #00246B;
+    -fx-font-family: "LemonMilkBold";
+}
+
+.radio-button {
+    -fx-text-size: 16px;
+    -fx-font-size: 16px;
+    -fx-text-fill: #00246B;
+    -fx-font-fill: #00246B;
+    -fx-font-family: "LemonMilkBold";
+}
+
+.combo-box {
+    -fx-text-size: 24px;
+    -fx-font-size: 24px;
+    -fx-text-fill: #00246B;
+    -fx-font-fill: #00246B;
+    -fx-font-family: "LemonMilkBold";
+    -fx-background-radius: 25px;
+    }
+
+.date-picker {
+    -fx-text-size: 24px;
+    -fx-font-size: 24px;
+    -fx-text-fill: #00246B;
+    -fx-font-fill: #00246B;
+    -fx-font-family: "LemonMilkBold";
+    -fx-background-radius: 25px;
+    }
+
+.date-picker .arrow-button {
+    -fx-text-size: 24px;
+    -fx-font-size: 24px;
+    -fx-text-fill: #00246B;
+    -fx-font-fill: #00246B;
+    -fx-font-family: "LemonMilkBold";
+    -fx-background-radius: 25px;
+    }
+
+.table-view .column-header-background .nested-column-header .table-column {
+    -fx-background-radius: 25px;
+    -fx-border-radius: 25px;
+    -fx-background-color: white;
+    }
+
+.table-view .column-header-background {
+    /* remove the background completely */
+    -fx-background-color: transparent;
+
+    }
+
+.table-view {
+    -fx-background-color: white;
+    -fx-background-radius: 25px;
+    -fx-border-radius: 25px;
+    }
+
+.table-column {
+    -fx-background-color: white;
+    -fx-min-width: 200px;
+    -fx-pref-width: 300px;
+    -fx-max-width: 5000px;
+    }
+
+
