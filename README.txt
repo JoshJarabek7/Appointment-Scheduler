@@ -1,9 +1,6 @@
 Title: Appointment Scheduler
 
 Author: Joshua Jarabek
-Contact Email: jjarab4@student.wgu.edu
-Student Application Version: QAM2
-Date: June 17th, 2022
 
 Purpose:
 The purpose of this program is to allow a company to schedule/manage appointments.
