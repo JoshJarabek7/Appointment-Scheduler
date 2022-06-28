@@ -214,7 +214,7 @@ public class LoginController implements Initializable { //This class is the cont
      */
     public void checkUpcomingAppointments(ActionEvent event) throws IOException { //This method is called when the login button is clicked and checks if there are any upcoming appointments to alert the user of.
         for (Appointment appointment : appointments) { //For each appointment in the list of appointments...
-            if (appointment.getUserId() == getActiveUserId() && (appointment.getStartDateTime().isEqual(now) || appointment.getStartDateTime().isBefore(now.plusMinutes(15)))) {
+            if ((appointment.getUserId() == getActiveUserId()) && (appointment.getStartDateTime().isEqual(now) || (appointment.getStartDateTime().isBefore(now.plusMinutes(15)) && appointment.getStartDateTime().isAfter(now)))) {
                 AlertHelper alertHelper = new AlertHelper("Information", "Upcoming Appointment", "You have appointment %d with %d at %s".formatted(appointment.getAppointmentId(), appointment.getContactId(), appointment.getStartDateTime()), Alert.AlertType.INFORMATION); //...the user is alerted that there is an appointment.
                 alertHelper.showAlert(event, "MainMenuView.fxml"); //Switches to the main menu screen.
             } else {
