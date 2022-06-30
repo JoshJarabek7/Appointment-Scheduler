@@ -27,7 +27,7 @@ public class Main extends Application { //Main class
     @Override
     public void start(Stage primaryStage) throws Exception { //Method for starting the program
         ResourceBundle bundle = ResourceBundle.getBundle("Nat", Locale.getDefault()); //Get the resource bundle for the current locale
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(("/view/LoginView.fxml"))), bundle); //Load the login view
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(("/view/LoginView.fxml")))); //Load the login view
         root.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/main/theme.css")).toExternalForm()); //Add the theme CSS
         primaryStage.setScene(new Scene(root, 900, 600)); //Set the scene
         primaryStage.show(); //Show the scene

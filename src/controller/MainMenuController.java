@@ -20,6 +20,8 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.TimeZone;
 
+import static controller.LoginController.getActiveUserId;
+
 /**
  * The class MainMenuController is the controller for the main menu.
  *
@@ -115,12 +117,12 @@ public class MainMenuController implements Initializable { //This class is the c
      * The Main table start.
      */
     @FXML
-    private TableColumn<Appointment, LocalTime> mainTableStart; //The table column for the appointment start time.
+    private TableColumn<Appointment, LocalDateTime> mainTableStart; //The table column for the appointment start time.
     /**
      * The Main table end.
      */
     @FXML
-    private TableColumn<Appointment, LocalTime> mainTableEnd; //The table column for the appointment end time.
+    private TableColumn<Appointment, LocalDateTime> mainTableEnd; //The table column for the appointment end time.
     /**
      * The Main table customer id.
      */
@@ -330,11 +332,11 @@ public class MainMenuController implements Initializable { //This class is the c
     @FXML
     private void onActionQuit(ActionEvent event) throws IOException { //This method is used to quit the application when the user clicks the quit button.
         AlertHelper alertHelper = new AlertHelper("Confirmation", "Quit", "Are you sure you want to quit?", Alert.AlertType.CONFIRMATION); //Create a new alert helper.
-        alertHelper.showAlertButStay(); //Show the alert.
-        Optional<ButtonType> result = alertHelper.getResult(); //Get the result of the alert.
-        if (result.isPresent() && result.get() == ButtonType.OK) { //If the user clicked OK...
-            SceneSwitcher.switchScreen(event, "LoginView.fxml"); //Switches to the login view.
-        }
+        alertHelper.showAlert(event, "LoginView.fxml"); //Show the alert.
+//        Optional<ButtonType> result = alertHelper.getResult(); //Get the result of the alert.
+//        if (result.isPresent() && result.get() == ButtonType.OK) { //If the user clicked OK...
+//            SceneSwitcher.switchScreen(event, "LoginView.fxml"); //Switches to the login view.
+        //}
     }
 
     /**

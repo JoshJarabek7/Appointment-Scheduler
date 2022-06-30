@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="600.0" prefWidth="900.0"
-            styleClass="anchor-pane" stylesheets="@../main/theme.css" xmlns="http://javafx.com/javafx/18"
+            styleClass="anchor-pane" stylesheets="@../main/theme.css" xmlns="http://javafx.com/javafx/11"
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainMenuController">
     <AnchorPane prefHeight="150.0" prefWidth="900.0" stylesheets="@../main/theme.css">
         <AnchorPane prefHeight="100.0" prefWidth="900.0">
